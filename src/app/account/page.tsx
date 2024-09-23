@@ -3,6 +3,9 @@ import { redirect } from "next/navigation"
 import { auth } from "@/lib/auth"
 import Image from "next/image"
 
+export const metadata: Metadata = {
+    title: 'Account',
+}
 
 export default async function Account() {
     const session = await auth()

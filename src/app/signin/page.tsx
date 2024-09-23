@@ -1,17 +1,17 @@
-import type { Metadata } from 'next';
-import { redirect } from 'next/navigation';
+import type { Metadata } from 'next'
+import { redirect } from 'next/navigation'
 import { signIn, auth, providerMap } from '@/lib/auth'
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
-    title: 'Login',
-};
+    title: 'Sign In',
+}
 
 export default async function SignIn() {
-    const session = await auth();
+    const session = await auth()
 
     if (session) {
-        redirect('/');
+        redirect('/')
     }
 
     return (

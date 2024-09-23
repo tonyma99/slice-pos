@@ -1,9 +1,14 @@
+import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { auth } from '@/lib/auth'
 import { getMenus } from '@/lib/actions'
 import Link from 'next/link'
 import NewMenuForm from '@/components/NewMenuForm'
 import { buttonVariants } from '@/components/ui/button'
+
+export const metadata: Metadata = {
+    title: 'Dashboard',
+};
 
 export default async function Dashboard() {
     const session = await auth()

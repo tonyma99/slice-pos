@@ -1,7 +1,12 @@
+import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { auth } from "@/lib/auth"
 import { checkMenuOwnership } from '@/lib/actions'
 import MenuEditor from "@/components/MenuEditor"
+
+export const metadata: Metadata = {
+    title: 'Edit',
+};
 
 type Props = {
     params: { slug: string }
