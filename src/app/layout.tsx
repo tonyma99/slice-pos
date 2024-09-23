@@ -27,11 +27,9 @@ export default function RootLayout({
                 <NavigationBar />
             </nav>
             <main>
-                <div className="flex">
-                    <div className="px-4 py-6 grow">
-                        {children}
-                    </div>
-                </div>
+              <div className="px-4 py-6">
+                {children}
+              </div>
             </main>
           </SessionProvider>
         </body>

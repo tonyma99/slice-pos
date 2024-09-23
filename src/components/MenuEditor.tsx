@@ -16,7 +16,12 @@ export default async function MenuEditor({ menuId }: Props) {
     
     return (
         <div className='flex flex-col gap-4 max-w-7xl mx-auto'>
-            <h1 className='font-bold text-2xl'>{menu.name}<span className='font-normal text-sm'> ({menu.name})</span></h1>
+            <div className='flex flex-col gap-2'>
+                <h1 className='font-bold text-2xl'>{menu.name}</h1>
+                {menu.description !== '' && (
+                    <p>{menu.description}</p>
+                )}
+            </div>
             <EditorMenu menuId={menu._id.toString()} />
             <EditorBody menu={JSON.parse(JSON.stringify(menu))} />
         </div>

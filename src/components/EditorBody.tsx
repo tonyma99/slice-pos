@@ -86,7 +86,7 @@ export default function MenuEditor({ menu }: Props) {
                                 ))}
                             </div>
                         ) : (
-                            <Alert>
+                            <Alert className='max-w-fit'>
                                 <FaCircleExclamation className='h-4 w-4' />
                                 <AlertTitle>You currently do not have any items!</AlertTitle>
                                 <AlertDescription>
@@ -97,7 +97,7 @@ export default function MenuEditor({ menu }: Props) {
                     </div>
                 ))
             ) : (
-                <Alert>
+                <Alert className='max-w-fit'>
                     <FaCircleExclamation className='h-4 w-4' />
                     <AlertTitle>You currently do not have any sections!</AlertTitle>
                     <AlertDescription>
